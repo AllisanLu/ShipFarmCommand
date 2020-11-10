@@ -1,0 +1,5 @@
+For extra credit I did:
+    - Non Trivial Graphics Addition: I made some small sprite to represent each ship, which shows aliens getting off.
+      I also created an icon for the GUI.
+    - Non Trivial controls: I made a queue that will show when q is pressed, the queue will also automatically fill ships
+      in as other ships leave. When evacuate is pressed, queue will be erased.
