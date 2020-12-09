@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StarBaseCommand.iml" filepath="$PROJECT_DIR$/StarBaseCommand.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ShipBaseCommand.iml" filepath="$PROJECT_DIR$/ShipBaseCommand.iml" />
     </modules>
   </component>
 </project>

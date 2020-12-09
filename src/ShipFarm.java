@@ -1,5 +1,3 @@
-//I have only used course materials on this assignment.
-//Allison Lu, GTID: 903560426
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -26,8 +24,8 @@ import java.util.ArrayList;
  * @author allison
  * @version 1.0
  */
-public class Starbase extends Application {
-    private static ArrayList<Starship> queueTypes = new ArrayList<>();
+public class ShipFarm extends Application {
+    private static ArrayList<ShipState> queueTypes = new ArrayList<>();
     private static ArrayList<String> queueNames = new ArrayList<>();
     private static Button[] docks = new Button[8];
     /**
@@ -37,12 +35,12 @@ public class Starbase extends Application {
     public void start(Stage primaryStage) {
         BorderPane pane = new BorderPane();
         StackPane sp = new StackPane();
-        ImageView space = new ImageView(new Image("space.jpg"));
+        ImageView space = new ImageView(new Image("radish.png"));
         sp.getChildren().add(space);
         sp.getChildren().add(pane);
 
         HBox header = new HBox();
-        Label welcome = new Label("Welcome to Starbase 1331!");
+        Label welcome = new Label("Welcome to Allison's Ship Farm!");
         welcome.setStyle("-fx-font-size: 36pt; -fx-font-family: Vivaldi");
         welcome.setTextFill(Color.WHITE);
         header.getChildren().add(welcome);
@@ -58,16 +56,16 @@ public class Starbase extends Application {
 
         setUpDocks(docks1, docks2);
 
-        VBox dockGroups = new VBox(docks1, docks2);
+        VBox dockGroups = new VBox(new HBox(), docks1, docks2);
         dockGroups.setSpacing(5);
-        dockGroups.setAlignment(Pos.CENTER);
+        dockGroups.setAlignment(Pos.TOP_CENTER);
         pane.setCenter(dockGroups);
 
         setUpInputs(pane);
 
         Scene scene = new Scene(sp, 700, 400);
         Stage popup = new Stage();
-        popup.getIcons().add(new Image("StarbaseIcon.gif"));
+        popup.getIcons().add(new Image("RadishIcon.gif"));
         popup.setTitle("Queue");
         scene.setOnKeyPressed(e -> {
             if (e.getCode() == KeyCode.Q) {
@@ -84,8 +82,9 @@ public class Starbase extends Application {
         });
 
         primaryStage.setTitle("Starbase Command");
-        primaryStage.getIcons().add(new Image("StarbaseIcon.gif"));
+        primaryStage.getIcons().add(new Image("RadishIcon.gif"));
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -97,7 +96,7 @@ public class Starbase extends Application {
     private static void setUpDocks(HBox docks1, HBox docks2) {
         for (int i = 0; i < docks.length; i++) {
             Button dock = new Button("EMPTY");
-            dock.setMinSize(150, 100);
+            dock.setMinSize(128, 85);
             dock.setContentDisplay(ContentDisplay.TOP);
             dock.setStyle("-fx-background-color: #000000");
             dock.setOnMouseClicked(e -> {
@@ -108,17 +107,17 @@ public class Starbase extends Application {
                 } else {
                     dock.setText(queueNames.get(0) + "\n" + queueTypes.get(0));
                     switch (queueTypes.get(0)) {
-                    case GALAXY:
-                        dock.setGraphic(new ImageView(new Image("Galaxy.gif")));
+                    case SINGLE:
+                        dock.setGraphic(new ImageView(new Image("single.gif")));
                         break;
-                    case CONSTITUTION:
-                        dock.setGraphic(new ImageView(new Image("Constitution.gif")));
+                    case CRUSH:
+                        dock.setGraphic(new ImageView(new Image("crush.gif")));
                         break;
-                    case INTREPID:
-                        dock.setGraphic(new ImageView(new Image("Intrepid.gif")));
+                    case UWU:
+                        dock.setGraphic(new ImageView(new Image("uwu.gif")));
                         break;
-                    case DEFIANT:
-                        dock.setGraphic(new ImageView(new Image("Defiant.gif")));
+                    case BROKEN:
+                        dock.setGraphic(new ImageView(new Image("broken.gif")));
                         break;
                     default:
                         break;
@@ -143,46 +142,46 @@ public class Starbase extends Application {
      */
     private static void setUpInputs(BorderPane pane) {
         TextField name = new TextField();
-        name.setPromptText("Starship name");
+        name.setPromptText("Ship name");
         ComboBox type = new ComboBox();
-        type.getItems().add("Defiant");
-        type.getItems().add("Intrepid");
-        type.getItems().add("Constitution");
-        type.getItems().add("Galaxy");
-        Button docking = new Button("Dock ship");
+        type.getItems().add("Single");
+        type.getItems().add("Crush");
+        type.getItems().add("uwu");
+        type.getItems().add("Broken");
+        Button docking = new Button("Plant ship");
         docking.setOnAction(e -> {
             if (type.getValue() == null) {
                 Alert noType = new Alert(Alert.AlertType.ERROR);
                 noType.setHeaderText("Try Again");
                 noType.setTitle("No Type");
-                noType.setContentText("No Starship type specified.");
+                noType.setContentText("No ship state specified.");
                 noType.showAndWait();
             } else if (name.getText().equals("")) {
                 Alert noType = new Alert(Alert.AlertType.ERROR);
                 noType.setHeaderText("Try Again");
                 noType.setTitle("No Name");
-                noType.setContentText("No Starship name specified.");
+                noType.setContentText("No ship name specified.");
                 noType.showAndWait();
             } else {
                 boolean docked = false;
-                Starship ship = null;
+                ShipState ship = null;
                 Image deboarding = null;
                 switch ((String) type.getValue()) {
-                case "Defiant":
-                    ship = Starship.DEFIANT;
-                    deboarding = new Image("Defiant.gif");
+                case "Single":
+                    ship = ShipState.SINGLE;
+                    deboarding = new Image("single.gif");
                     break;
-                case "Intrepid":
-                    ship = Starship.INTREPID;
-                    deboarding = new Image("Intrepid.gif");
+                case "Crush":
+                    ship = ShipState.CRUSH;
+                    deboarding = new Image("crush.gif");
                     break;
-                case "Constitution":
-                    ship = Starship.CONSTITUTION;
-                    deboarding = new Image("Constitution.gif");
+                case "uwu":
+                    ship = ShipState.UWU;
+                    deboarding = new Image("uwu.gif");
                     break;
-                case "Galaxy":
-                    ship = Starship.GALAXY;
-                    deboarding = new Image("Galaxy.gif");
+                case "Broken":
+                    ship = ShipState.BROKEN;
+                    deboarding = new Image("broken.gif");
                     break;
                 default:
                     break;
@@ -212,7 +211,7 @@ public class Starbase extends Application {
             name.clear();
             type.getSelectionModel().clearSelection();
         });
-        Button evacuate = new Button("EVACUATE");
+        Button evacuate = new Button("EMPTY");
         evacuate.setStyle("-fx-background-color: #ba0000");
         evacuate.setTextFill(Color.WHITE);
         evacuate.setOnAction(e -> {

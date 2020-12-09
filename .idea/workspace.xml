@@ -2,9 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aea0a40a-f305-4d47-8663-3890ab2c5198" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Starbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Starbase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StarBaseCommand.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ShipBaseCommand.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StarBaseCommand/Starbase$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StarBaseCommand/Starbase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StarBaseCommand/Starship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Constitution.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Defiant.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Galaxy.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Intrepid.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Starbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shipbase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Starship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShipState.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,16 +64,16 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Window">
-    <configuration name="Starbase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Starbase" />
-      <module name="StarBaseCommand" />
+    <configuration name="ShipFarm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ShipFarm" />
+      <module name="ShipBaseCommand" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Window" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Starbase" />
-      <module name="StarBaseCommand" />
+      <option name="MAIN_CLASS_NAME" value="ShipFarm" />
+      <module name="ShipBaseCommand" />
       <option name="VM_PARAMETERS" value="--module-path \Users\alcp2\IntelliJIDEAProjects\javafx-sdk-11.0.2\lib\ --add-modules javafx.controls" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <method v="2">
@@ -72,11 +82,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.Window" />
-      <item itemvalue="Application.Starbase" />
+      <item itemvalue="Application.ShipFarm" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Starbase" />
+        <item itemvalue="Application.ShipFarm" />
       </list>
     </recent_temporary>
   </component>
@@ -98,7 +108,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
