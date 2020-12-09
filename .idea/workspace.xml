@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aea0a40a-f305-4d47-8663-3890ab2c5198" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarBaseCommand.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ShipBaseCommand.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StarBaseCommand/Starbase$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StarBaseCommand/Starbase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StarBaseCommand/Starship.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Constitution.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Defiant.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Galaxy.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Intrepid.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Starbase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Shipbase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Starship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShipState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ShipBaseCommand/ShipFarm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ShipBaseCommand/ShipFarm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShipFarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShipFarm.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

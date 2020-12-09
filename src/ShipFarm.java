@@ -20,7 +20,7 @@ import javafx.stage.Stage;
 import java.util.ArrayList;
 
 /**
- * Represents a Starbase where Starships can dock at.
+ * Represents a Ship Farm where ships can be planted.
  * @author allison
  * @version 1.0
  */
@@ -81,7 +81,7 @@ public class ShipFarm extends Application {
             }
         });
 
-        primaryStage.setTitle("Starbase Command");
+        primaryStage.setTitle("Ship Farm Command");
         primaryStage.getIcons().add(new Image("RadishIcon.gif"));
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -98,11 +98,11 @@ public class ShipFarm extends Application {
             Button dock = new Button("EMPTY");
             dock.setMinSize(128, 85);
             dock.setContentDisplay(ContentDisplay.TOP);
-            dock.setStyle("-fx-background-color: #000000");
+            dock.setStyle("-fx-background-color: #8c6e54");
             dock.setOnMouseClicked(e -> {
                 if (queueNames.size() < 1) {
                     dock.setText("EMPTY");
-                    dock.setStyle("-fx-background-color: #000000");
+                    dock.setStyle("-fx-background-color: #8c6e54");
                     dock.setGraphic(null);
                 } else {
                     dock.setText(queueNames.get(0) + "\n" + queueTypes.get(0));
@@ -149,6 +149,7 @@ public class ShipFarm extends Application {
         type.getItems().add("uwu");
         type.getItems().add("Broken");
         Button docking = new Button("Plant ship");
+        docking.setStyle("-fx-background-color: #56a86c");
         docking.setOnAction(e -> {
             if (type.getValue() == null) {
                 Alert noType = new Alert(Alert.AlertType.ERROR);
@@ -201,10 +202,10 @@ public class ShipFarm extends Application {
                     queueNames.add(name.getText());
                     Alert noSpace = new Alert(Alert.AlertType.WARNING);
                     noSpace.setHeaderText("Please wait");
-                    noSpace.setTitle("No Docks Available");
-                    noSpace.setContentText(name.getText() + " has not been granted docking clearence! \n"
+                    noSpace.setTitle("No Planters Available");
+                    noSpace.setContentText(name.getText() + " has not been granted planting clearance! \n"
                             + name.getText()
-                            + " will be let in as docks open.");
+                            + " will be let in as planters open.");
                     noSpace.showAndWait();
                 }
             }
