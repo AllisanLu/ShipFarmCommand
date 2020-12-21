@@ -1,4 +1,4 @@
-# StarBaseCommand
+# ShipFarmCommand
 
  used to place ships in docks,
  can take in different types of ships,
